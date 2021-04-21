@@ -18,6 +18,7 @@ curl -s -X $'GET' \
 echo ""
 echo "Saved to users.txt"
 echo ""
+#Following users
 echo "Following users"
 for users in $(cat users.txt); do sleep 5 | curl -s -k -X $'POST' \
     -H $'Host: www.instagram.com' -H $'X-CSRFToken: '$3'' -H $'X-Instagram-AJAX: '$4'' -H $'Content-Length: 0' \
